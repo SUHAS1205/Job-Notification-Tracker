@@ -899,3 +899,52 @@ input[type="checkbox"] {
   border: 1px solid var(--color-border-strong);
 }
 
+
+/* Match Badges */
+.match-badge {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: var(--space-2);
+  align-self: flex-start;
+}
+
+.score-green {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  border: 1px solid var(--color-success-border);
+}
+
+.score-amber {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+}
+
+.score-neutral {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.score-grey {
+  background-color: #fafafa;
+  color: #999;
+  border: 1px solid #eee;
+}
+
+/* Preference Banner */
+.preference-banner {
+  background-color: white;
+  border: 1px solid var(--color-accent);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-base);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+

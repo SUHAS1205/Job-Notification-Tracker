@@ -23,6 +23,9 @@
 
     <main class="page">
         <div class="workspace">
+            <!-- Banner -->
+            <div id="pref-banner-container" style="display: none;"></div>
+
             <!-- Filter Bar -->
             <div class="filter-bar">
                 <input type="text" id="search" class="input filter-bar__search" placeholder="Search title or company..."
@@ -59,6 +62,20 @@
                     <option value="Naukri">Naukri</option>
                     <option value="Indeed">Indeed</option>
                 </select>
+
+                <!-- Sort & Match -->
+                <div
+                    style="display:flex; gap: 8px; align-items: center; border-left: 1px solid var(--color-border-subtle); padding-left: 12px; margin-left: auto;">
+                    <select id="sort-by" class="input button--small" style="width: auto;" onchange="applyFilters()">
+                        <option value="latest">Sort: Latest</option>
+                        <option value="score">Sort: Match Score</option>
+                        <option value="salary">Sort: Salary</option>
+                    </select>
+
+                    <label class="checkbox-row" style="font-size: 14px; white-space: nowrap;">
+                        <input type="checkbox" id="toggle-matches" onchange="applyFilters()"> Match Only
+                    </label>
+                </div>
             </div>
 
             <div id="job-container" class="job-grid">
