@@ -21,9 +21,57 @@
         </div>
     </nav>
 
-    <main class="page-placeholder">
-        <h1>Settings</h1>
-        <p>This section will be built in the next step.</p>
+    <main class="page">
+        <div class="form-container">
+            <h1 style="margin-bottom: var(--space-4);">Preferences</h1>
+
+            <div class="card">
+                <div class="card__body">
+
+                    <div class="field-group">
+                        <label class="field-label" for="role-keywords">Role Keywords</label>
+                        <p class="field-description">Comma-separated titles (e.g. Frontend Developer, UI Engineer)</p>
+                        <input type="text" id="role-keywords" class="input" placeholder="Enter keywords...">
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label" for="locations">Preferred Locations</label>
+                        <input type="text" id="locations" class="input"
+                            placeholder="e.g. San Francisco, Remote, London">
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label">Work Mode</label>
+                        <div class="checkbox-row" style="gap: var(--space-3);">
+                            <label class="checkbox-row">
+                                <input type="radio" name="mode" value="remote" checked> Remote
+                            </label>
+                            <label class="checkbox-row">
+                                <input type="radio" name="mode" value="hybrid"> Hybrid
+                            </label>
+                            <label class="checkbox-row">
+                                <input type="radio" name="mode" value="onsite"> Onsite
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label" for="experience">Experience Level</label>
+                        <select id="experience" class="input">
+                            <option value="entry">Entry Level (0-2 years)</option>
+                            <option value="mid">Mid Level (3-5 years)</option>
+                            <option value="senior">Senior Level (5+ years)</option>
+                            <option value="lead">Lead / Manager</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="button button--primary">Save Preferences</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="nav.js"></script>
