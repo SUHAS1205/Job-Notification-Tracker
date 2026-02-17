@@ -1,231 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KodNest Premium Build System</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Top Bar -->
-    <header class="top-bar">
-      <div class="top-bar__content">
-        <div class="top-bar__left">
-          <span class="top-bar__project-name">KodNest Premium Build System</span>
-        </div>
-        <div class="top-bar__center">
-          <span class="top-bar__progress-label">Step 1 / 4</span>
-        </div>
-        <div class="top-bar__right">
-          <span class="status-badge status-badge--in-progress">In Progress</span>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Notification Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-bar__logo">JobTracker</a>
+    <button class="nav-bar__toggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-bar__links">
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+      <a href="saved.html" class="nav-link">Saved</a>
+      <a href="digest.html" class="nav-link">Digest</a>
+      <a href="settings.html" class="nav-link">Settings</a>
+      <a href="proof.html" class="nav-link">Proof</a>
+    </div>
+  </nav>
 
-    <main class="page">
-      <!-- Context Header -->
-      <section class="context-header">
-        <div class="context-header__inner">
-          <h1 class="context-header__title">Define your build scope</h1>
-          <p class="context-header__subtitle">
-            Clarify what this step must accomplish before you start implementing.
-          </p>
-        </div>
-      </section>
+  <main class="page-placeholder">
+    <h1>Job Notification Tracker</h1>
+    <p>This section will be built in the next step.</p>
+  </main>
 
-      <!-- Primary + Secondary Layout -->
-      <section class="workspace">
-        <div class="workspace__inner">
-          <!-- Primary Workspace (70%) -->
-          <section class="primary">
-            <article class="card">
-              <header class="card__header">
-                <h2 class="card__title">Requirements summary</h2>
-                <p class="card__subtitle">
-                  Capture the essential inputs for this build step.
-                </p>
-              </header>
-              <div class="card__body">
-                <div class="field-group">
-                  <label class="field-label" for="objective">Objective</label>
-                  <p class="field-description">
-                    Describe the single most important outcome of this step.
-                  </p>
-                  <textarea
-                    id="objective"
-                    class="input input--textarea"
-                    rows="4"
-                    placeholder="Example: Users can configure and save a deployment-ready build template."
-                  ></textarea>
-                </div>
-
-                <div class="field-group">
-                  <label class="field-label" for="constraints">Constraints</label>
-                  <p class="field-description">
-                    Note any fixed requirements, integrations, or technical limits.
-                  </p>
-                    <textarea
-                      id="constraints"
-                      class="input input--textarea"
-                      rows="3"
-                      placeholder="Example: Use existing auth, no new third-party dependencies."
-                    ></textarea>
-                </div>
-
-                <div class="field-group">
-                  <label class="field-label" for="acceptance">Acceptance criteria</label>
-                  <p class="field-description">
-                    List the conditions that must be true before this step is considered complete.
-                  </p>
-                  <textarea
-                    id="acceptance"
-                    class="input input--textarea"
-                    rows="4"
-                    placeholder="- User can save settings&#10;- Saved settings are applied on next build&#10;- No validation errors for required fields"
-                  ></textarea>
-                </div>
-
-                <div class="button-row">
-                  <button class="button button--primary">Save scope</button>
-                  <button class="button button--secondary">Discard changes</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <header class="card__header">
-                <h2 class="card__title">Implementation notes</h2>
-                <p class="card__subtitle">
-                  Add any technical details or decisions worth preserving.
-                </p>
-              </header>
-              <div class="card__body">
-                <textarea
-                  class="input input--textarea"
-                  rows="6"
-                  placeholder="Document trade-offs, patterns, and key decisions here."
-                ></textarea>
-              </div>
-            </article>
-          </section>
-
-          <!-- Secondary Panel (30%) -->
-          <aside class="secondary">
-            <article class="card secondary-card">
-              <header class="card__header">
-                <h2 class="card__title">This step</h2>
-                <p class="card__subtitle">
-                  A concise definition now prevents rework later.
-                </p>
-              </header>
-              <div class="card__body">
-                <section class="secondary-section">
-                  <h3 class="secondary-section__title">Guidance</h3>
-                  <p class="secondary-section__body">
-                    Focus on what must be true when this step is finished, not how it will be built.
-                  </p>
-                </section>
-
-                <section class="secondary-section">
-                  <h3 class="secondary-section__title">State palette</h3>
-                  <div class="secondary-section__states">
-                    <span class="status-badge status-badge--success">Success</span>
-                    <span class="status-badge status-badge--warning">Warning</span>
-                  </div>
-                </section>
-
-                <section class="secondary-section">
-                  <div class="secondary-section__header">
-                    <h3 class="secondary-section__title">Prompt</h3>
-                    <button class="button button--copy button--small">
-                      <span class="button-icon">📋</span>
-                      Copy
-                    </button>
-                  </div>
-                  <div class="prompt-box">
-                    <p class="prompt-box__text">
-                      Use this scope to generate a calm, production-ready implementation plan. Avoid hype and keep language precise.
-                    </p>
-                  </div>
-                </section>
-
-                <section class="secondary-section secondary-section--actions">
-                  <h3 class="secondary-section__title">Actions</h3>
-                  <div class="button-column">
-                    <button class="button button--primary">
-                      <span class="button-icon">📦</span>
-                      Build in Lovable
-                    </button>
-                    <button class="button button--success">
-                      <span class="button-icon">✓</span>
-                      It Worked
-                    </button>
-                    <button class="button button--error">
-                      <span class="button-icon button-icon--error">!</span>
-                      Error
-                    </button>
-                    <button class="button button--secondary">
-                      <span class="button-icon">📷</span>
-                      Add Screenshot
-                    </button>
-                  </div>
-                </section>
-              </div>
-            </article>
-          </aside>
-        </div>
-      </section>
-    </main>
-
-    <!-- Proof Footer -->
-    <footer class="proof-footer">
-      <div class="proof-footer__inner">
-        <div class="proof-footer__item">
-          <label class="checkbox-row">
-            <input type="checkbox" />
-            <span class="checkbox-label">UI Built</span>
-          </label>
-          <input
-            type="text"
-            class="input input--small"
-            placeholder="Link or note confirming UI is implemented."
-          />
-        </div>
-        <div class="proof-footer__item">
-          <label class="checkbox-row">
-            <input type="checkbox" />
-            <span class="checkbox-label">Logic Working</span>
-          </label>
-          <input
-            type="text"
-            class="input input--small"
-            placeholder="Describe how logic was validated."
-          />
-        </div>
-        <div class="proof-footer__item">
-          <label class="checkbox-row">
-            <input type="checkbox" />
-            <span class="checkbox-label">Test Passed</span>
-          </label>
-          <input
-            type="text"
-            class="input input--small"
-            placeholder="Reference the test or check performed."
-          />
-        </div>
-        <div class="proof-footer__item">
-          <label class="checkbox-row">
-            <input type="checkbox" />
-            <span class="checkbox-label">Deployed</span>
-          </label>
-          <input
-            type="text"
-            class="input input--small"
-            placeholder="Environment and deployment reference."
-          />
-        </div>
-      </div>
-    </footer>
-  </body>
-  </html>
-
+  <script src="nav.js"></script>
+</body>
+</html>
