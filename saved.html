@@ -22,13 +22,33 @@
     </nav>
 
     <main class="page">
-        <div class="empty-state">
-            <span class="empty-state__icon">🔖</span>
-            <h2 class="empty-state__title">No saved jobs</h2>
-            <p class="empty-state__text">Jobs you bookmark will appear here for easy access.</p>
+        <div class="workspace">
+            <h1 style="margin-bottom: var(--space-3); font-family: 'Georgia', serif;">Saved Jobs</h1>
+            <div id="saved-container" class="job-grid">
+                <!-- Saved jobs rendered here -->
+            </div>
+        </div>
+
+        <!-- Modal (Reusable) -->
+        <div id="job-modal" class="modal-overlay">
+            <div class="modal">
+                <div class="modal__header">
+                    <div>
+                        <div id="modal-title" class="modal__title">Title</div>
+                        <div id="modal-company" class="text-muted">Company</div>
+                    </div>
+                    <button class="modal__close" onclick="closeModal()">×</button>
+                </div>
+                <div id="modal-skills" class="modal__skills"></div>
+                <p id="modal-desc" style="margin-bottom: 24px; line-height: 1.6;"></p>
+                <a id="modal-apply" href="#" target="_blank" class="button button--primary" style="width: 100%">Apply
+                    Now</a>
+            </div>
         </div>
     </main>
 
+    <script src="data.js"></script>
+    <script src="app.js"></script>
     <script src="nav.js"></script>
 </body>
 

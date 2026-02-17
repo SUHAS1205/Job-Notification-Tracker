@@ -22,13 +22,71 @@
     </nav>
 
     <main class="page">
-        <div class="empty-state">
-            <span class="empty-state__icon">📊</span>
-            <h2 class="empty-state__title">No jobs yet</h2>
-            <p class="empty-state__text">In the next step, you will load a realistic dataset.</p>
+        <div class="workspace">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <input type="text" id="search" class="input filter-bar__search" placeholder="Search title or company..."
+                    oninput="applyFilters()">
+
+                <select id="filter-location" class="input filter-bar__dropdown" onchange="applyFilters()">
+                    <option value="">All Locations</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Gurugram">Gurugram</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Remote">Remote</option>
+                </select>
+
+                <select id="filter-mode" class="input filter-bar__dropdown" onchange="applyFilters()">
+                    <option value="">All Modes</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Onsite">Onsite</option>
+                </select>
+
+                <select id="filter-exp" class="input filter-bar__dropdown" onchange="applyFilters()">
+                    <option value="">Experience</option>
+                    <option value="Fresher">Fresher</option>
+                    <option value="0-1">0-1 Years</option>
+                    <option value="1-3">1-3 Years</option>
+                    <option value="3-5">3-5 Years</option>
+                </select>
+
+                <select id="filter-source" class="input filter-bar__dropdown" onchange="applyFilters()">
+                    <option value="">All Sources</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Naukri">Naukri</option>
+                    <option value="Indeed">Indeed</option>
+                </select>
+            </div>
+
+            <div id="job-container" class="job-grid">
+                <!-- Jobs rendered here -->
+            </div>
         </div>
+
+        <!-- Modal -->
+        <div id="job-modal" class="modal-overlay">
+            <div class="modal">
+                <div class="modal__header">
+                    <div>
+                        <div id="modal-title" class="modal__title">Title</div>
+                        <div id="modal-company" class="text-muted">Company</div>
+                    </div>
+                    <button class="modal__close" onclick="closeModal()">×</button>
+                </div>
+                <div id="modal-skills" class="modal__skills"></div>
+                <p id="modal-desc" style="margin-bottom: 24px; line-height: 1.6;"></p>
+                <a id="modal-apply" href="#" target="_blank" class="button button--primary" style="width: 100%">Apply
+                    Now</a>
+            </div>
+        </div>
+
     </main>
 
+    <script src="data.js"></script>
+    <script src="app.js"></script>
     <script src="nav.js"></script>
 </body>
 
